@@ -1,0 +1,17 @@
+.footer {
+    position: fixed;
+    bottom: 40px;
+    width: 100%;
+    height: 24px;
+    z-index: 1000;
+}
+
+.footer__wrap {
+    height: inherit;
+    padding-left: 140px;
+    padding-right: 100px;
+}
+
+.footer__logo {
+
+}

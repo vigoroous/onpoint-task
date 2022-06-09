@@ -1,0 +1,14 @@
+.icon-home {
+    fill: #282828;
+    stroke: #282828;
+    stroke-width: 2px;
+    fill-rule: evenodd;
+}
+
+.icon-divider {
+    fill: #e7ebef;
+    stroke: #282828;
+    stroke-linecap: round;
+    stroke-width: 2px;
+    fill-rule: evenodd;
+}
