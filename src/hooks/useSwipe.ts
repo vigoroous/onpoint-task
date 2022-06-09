@@ -15,11 +15,13 @@ export const useSwipe = ({setPage}: Props) => {
 
     const onPointerUp: GlobalEventHandlers['onpointerup'] = e => {
         offset.current += e.movementX;
+        console.log(offset.current)
         e.preventDefault();
     }
 
     const onPointerMove: GlobalEventHandlers['onpointermove'] = e => {
         const rect = borders.current?.getBoundingClientRect();
+        
         if (Math.abs(offset.current) > (rect?.width ?? e.width) * 0.3) {
             if (offset.current < 0)
                 setPage(page => Math.min(2, page+1));

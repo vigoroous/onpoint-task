@@ -5,6 +5,7 @@
     overflow: hidden;
     background-repeat: no-repeat;
     background-size: cover;
+    transition: background-position-x 0.7s ease-out;
 }
 
 .slider__item {

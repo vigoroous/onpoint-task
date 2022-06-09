@@ -6,7 +6,8 @@
     height: 80px;
     width: 288px;
     padding: 0 20px;
-    margin-top: 400px;
+    margin: 0 auto;
+    cursor: pointer;
 }
 
 .next-button__icon {

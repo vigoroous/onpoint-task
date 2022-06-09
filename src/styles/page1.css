@@ -1,0 +1,26 @@
+.page-wrapper {
+    /* margin-top: 140px;
+    margin-left: 70px; */
+    padding: 140px 70px 70px;
+}
+
+.welcome-message {
+    font-family: 'DIN Pro';
+    font-size: 27px;
+    text-transform: uppercase;
+}
+
+.article {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    font-family: 'Gilroy';
+    font-size: 109px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.article__fragment {
+    font-weight: 700;
+}
