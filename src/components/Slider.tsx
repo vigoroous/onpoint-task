@@ -1,91 +1,44 @@
-import React, { Children, cloneElement, createElement, FC, JSXElementConstructor, ReactElement, useCallback, useEffect, useRef, useState } from "react";
+import SliderProvider, { SliderContext } from "providers/SliderProvider";
+import { useSwipe } from "hooks/useSwipe";
+import React, { useContext, FC, useRef, useEffect } from "react";
 import "styles/slider.css"
 
 
 type SliderItemProps = {
-    children?: React.ReactNode;
-    bgImage?: string;
-    style?: React.CSSProperties;
-    setActive?: React.Dispatch<React.SetStateAction<number>>;
-    _index?: number;
+    children?: JSX.Element[] | JSX.Element;
 }
 
-const SliderItem: FC<SliderItemProps> = ({ bgImage, style, setActive, _index, children }) => {
-    const sliderItemRef = useRef<HTMLDivElement>(null)
-    const [result, setResult] = useState(0)
-    const [dragging, setDragging] = useState(false);
-    const previousClientX = useRef(0);
+const SliderItem: FC<SliderItemProps> = ({ children }) => {
+    const [page, setPage] = useContext(SliderContext);
 
-    const handleMouseDown = useCallback((e: MouseEvent) => {
-        previousClientX.current = e.clientX;
-        setDragging(true);
-    }, []);
-
-    const handleMouseUp = useCallback((e: MouseEvent) => {
-        setDragging(false);
-    }, []);
-
-    const handleMouseMove = useCallback((e: MouseEvent) => {
-        if (!dragging) return;
-        if (!setActive) return;
-        setResult((result) => {
-            const change = e.clientX - previousClientX.current;
-            return change;
-        });
-    },
-        [dragging]
-    );
-    
-    useEffect(() => {
-        console.log(result)
-        if (!setActive) return;
-        if (_index === undefined) return;
-        if (result < -300 && _index < 2) return setActive(_index + 1)
-        else if (result > 300 && _index > 0) return setActive(_index - 1)
-        else return;
-    }, [dragging])
+    const { ref } = useSwipe({ setPage })
 
     useEffect(() => {
-        sliderItemRef.current?.addEventListener('mousedown', handleMouseDown);
-        sliderItemRef.current?.addEventListener('mouseup', handleMouseUp);
-        sliderItemRef.current?.addEventListener('mousemove', handleMouseMove);
-        return () => {
-            sliderItemRef.current?.removeEventListener('mousedown', handleMouseDown);
-            sliderItemRef.current?.removeEventListener('mouseup', handleMouseUp);
-            sliderItemRef.current?.removeEventListener('mousemove', handleMouseMove);
-        };
-    }, [handleMouseDown, handleMouseUp, handleMouseMove])
+        console.log({ page })
+    }, [page]);
 
     return (
-        <div className="slider__item" style={{ ...style, backgroundImage: `url('${bgImage}')` }} ref={sliderItemRef}>
+        <div className="slider__item" ref={ref}>
             {children}
         </div>
     );
 }
 
 type SliderProps = {
-    children?: React.ReactElement<any>[]
+    children?: JSX.Element[]
 }
 
 const Slider: FC<SliderProps> = ({ children }) => {
-    const [active, setActive] = useState(0)
-
+    
     return (
-        <div className="slider">
-
-            {Children.map(children, (child, index) => {
-                if (child)
-                    return cloneElement(child, {
-                        ...child.props,
-                        _index: index,
-                        setActive,
-                        style: {
-                            ...child.props.style,
-                            transform: `translate3d(${(index - active) * 100}vw, 0, 0)`
-                        }
-                    })
-            })}
-        </div>
+        <SliderProvider>
+            <div className="slider" style={{
+                backgroundImage: `url('images/bg_full.png')`,
+                // backgroundPositionX: `${page * -100}vw`,
+            }}>
+                {children}
+            </div>
+        </SliderProvider>
     );
 }
 

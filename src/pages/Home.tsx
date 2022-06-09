@@ -7,9 +7,9 @@ const Home: FC = () => {
     return (
         <>
             <Slider>
-                <SliderItem bgImage="images/bg.png"><NextButton /></SliderItem>
-                <SliderItem bgImage="images/bg2.png"><NextButton /></SliderItem>
-                <SliderItem bgImage="images/bg3.png"><NextButton /></SliderItem>
+                <SliderItem><NextButton /></SliderItem>
+                <SliderItem><NextButton /></SliderItem>
+                <SliderItem><NextButton /></SliderItem>
             </Slider>
         </>
     )
