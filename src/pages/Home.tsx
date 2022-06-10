@@ -9,7 +9,7 @@ const Home: FC = () => {
         <>
             <Slider>
                 <SliderItem><Page1 /></SliderItem>
-                <SliderItem><NextButton /></SliderItem>
+                <SliderItem><Page1 /></SliderItem>
                 <SliderItem><NextButton /></SliderItem>
             </Slider>
         </>

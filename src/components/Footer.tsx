@@ -5,7 +5,7 @@ const Footer: FC = () => {
     return (
         <footer className="footer">
             <div className="footer__wrap">
-                <img src="images/logo.svg" className="footer__logo"/>
+                <img src="images/logo.svg" className="footer__logo" alt="logo"/>
             </div>
         </footer>
     );
