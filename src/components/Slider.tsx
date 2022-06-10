@@ -56,7 +56,7 @@ type SliderProps = {
 }
 
 const Slider: FC<SliderProps> = ({ children }) => {
-    const [page, setPage] = useContext(SliderContext);
+    const [page] = useContext(SliderContext);
     const offsetX = page * -100;
 
     return (

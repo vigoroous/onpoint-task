@@ -6,7 +6,7 @@ import "styles/page1.css"
 const Page1: FC = () => {
     return (
         <>
-            <div className="page-wrapper">
+            <div className="page-wrapper" style={{padding: `165px 70px 70px`}}>
                 <div className="welcome-message">Привет,</div>
                 <div className="article">
                     <span className="article__text">это</span>

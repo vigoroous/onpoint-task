@@ -1,0 +1,45 @@
+.scrollbar {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-height: 445px;
+    max-width: 890px;
+    margin-top: 50px;
+}
+
+.scrollbar__control {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20px;
+    height: 100%;
+    margin-left: 10px;
+}
+
+.scrollbar__control-track {
+    border-radius: 2.5px;
+    background-color: #000000;
+    width: 5px;
+    height: inherit;
+}
+
+.scrollbar__control-thumb {
+    position: absolute;
+    width: 20px;
+    height: 104px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.scrollbar__content {
+    font-size: 25px;
+    font-family: 'DIN Pro';
+    background-color: #FFFFFF;
+    margin-left: 40px;
+    margin-right: 50px;
+    border-radius: 40px;
+    padding: 40px;
+    overflow: auto;
+    box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
+}
