@@ -26,6 +26,7 @@ const Page2: FC = () => {
                         tempus. Sit amet est placerat in egestas erat. At quis risus sed vulputate
                         odio ut. Tristique risus nec feugiat in fermentum posuere urna nec tincidunt.
                     </>
+                    <br /><br />
                     <>
                         Lorem ipsum dolor sit amet,
                         consectetur adipiscing elit,
@@ -44,19 +45,19 @@ const Page2: FC = () => {
             </div>
             <div className="particles" style={{ animationPlayState: `${page === 1 ? 'running' : 'paused'}` }}>
                 <div className="particles__item particles__item_10">
-                    <img src="images/group_2/item_10.png" />
+                    <img src="images/group_2/item_10.png" draggable="false" alt="" />
                 </div>
                 <div className="particles__item particles__item_11">
-                    <img src="images/group_2/item_11.png" />
+                    <img src="images/group_2/item_11.png" draggable="false" alt="" />
                 </div>
                 <div className="particles__item particles__item_12">
-                    <img src="images/group_2/item_12.png" />
+                    <img src="images/group_2/item_12.png" draggable="false" alt="" />
                 </div>
                 <div className="particles__item particles__item_13">
-                    <img src="images/group_2/item_13.png" />
+                    <img src="images/group_2/item_13.png" draggable="false" alt="" />
                 </div>
                 <div className="particles__item particles__item_14">
-                    <img src="images/group_2/item_14.png" />
+                    <img src="images/group_2/item_14.png" draggable="false" alt="" />
                 </div>
             </div>
         </>

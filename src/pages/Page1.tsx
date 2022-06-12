@@ -6,7 +6,7 @@ import "styles/page1.css"
 const Page1: FC = () => {
     return (
         <>
-            <div className="page-wrapper" style={{padding: `165px 70px 70px`}}>
+            <div className="page-wrapper" style={{ padding: `165px 70px 70px` }}>
                 <div className="welcome-message">Привет,</div>
                 <div className="article">
                     <span className="article__text">это</span>
@@ -18,33 +18,33 @@ const Page1: FC = () => {
             </div>
             <div className="particles">
                 <div className="particles__item particles__item_1">
-                    <img src="images/group_1/item_1.png" />
+                    <img src="images/group_1/item_1.png" draggable="false" alt="" />
                 </div>
                 <div className="particles__item particles__item_2">
-                    <img src="images/group_1/item_2.png" />
+                    <img src="images/group_1/item_2.png" draggable="false" alt="" />
                 </div>
                 <div className="particles__item particles__item_3">
-                    <img src="images/group_1/item_3.png" />
+                    <img src="images/group_1/item_3.png" draggable="false" alt="" />
                 </div>
                 <div className="particles__item-orbit">
                     <div className="particles__item particles__item_4">
-                        <img src="images/group_1/item_4.png" />
+                        <img src="images/group_1/item_4.png" draggable="false" alt="" />
                     </div>
                 </div>
                 <div className="particles__item particles__item_5">
-                    <img src="images/group_1/item_5.png" />
+                    <img src="images/group_1/item_5.png" draggable="false" alt="" />
                 </div>
                 <div className="particles__item particles__item_6">
-                    <img src="images/group_1/item_6.png" />
+                    <img src="images/group_1/item_6.png" draggable="false" alt="" />
                 </div>
                 <div className="particles__item particles__item_7">
-                    <img src="images/group_1/item_7.png" />
+                    <img src="images/group_1/item_7.png" draggable="false" alt="" />
                 </div>
                 <div className="particles__item particles__item_8">
-                    <img src="images/group_1/item_8.png" />
+                    <img src="images/group_1/item_8.png" draggable="false" alt="" />
                 </div>
                 <div className="particles__item particles__item_9">
-                    <img src="images/group_1/item_9.png" />
+                    <img src="images/group_1/item_9.png" draggable="false" alt="" />
                 </div>
             </div>
         </>

@@ -12,17 +12,17 @@ const SliderItem: FC<SliderItemProps> = ({ style, children }) => {
     const [page, setPage] = useContext(SliderContext);
     const offset = useRef(0);
 
-    const subscribeDown: React.PointerEventHandler<HTMLDivElement> = e => {
+    const handlePointerDown: React.PointerEventHandler<HTMLDivElement> = e => {
         offset.current = 0;
-        e.preventDefault();
+        // e.preventDefault();
     }
 
-    const onMove: React.PointerEventHandler<HTMLDivElement> = e => {
+    const handlePointerMove: React.PointerEventHandler<HTMLDivElement> = e => {
         offset.current += e.movementX;
-        e.preventDefault();
+        // e.preventDefault();
     }
 
-    const unsubscribeDown: React.PointerEventHandler<HTMLDivElement> = e => {
+    const handlePointerUp: React.PointerEventHandler<HTMLDivElement> = e => {
         const rect = e.currentTarget.getBoundingClientRect();
         if (Math.abs(offset.current) > rect.width * 0.3) {
             if (offset.current < 0)
@@ -40,9 +40,9 @@ const SliderItem: FC<SliderItemProps> = ({ style, children }) => {
 
     return (
         <div className="slider__item"
-            onPointerDown={subscribeDown}
-            onPointerUp={unsubscribeDown}
-            onPointerMove={onMove}
+            onPointerDown={handlePointerDown}
+            onPointerUp={handlePointerUp}
+            onPointerMove={handlePointerMove}
             style={style}
         // style={{ transform: `translate3d(${x}vw, 0 ,0)` }}
         >
