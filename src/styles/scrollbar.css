@@ -5,6 +5,7 @@
     max-height: 445px;
     max-width: 890px;
     margin-top: 50px;
+    position: relative;
 }
 
 .scrollbar__control {
@@ -39,7 +40,7 @@
     margin-left: 40px;
     margin-right: 50px;
     border-radius: 40px;
-    padding: 40px;
-    overflow: auto;
+    padding: 20px 40px;
+    overflow: hidden;
     box-shadow: 5.446px 8.387px 232.5px 17.5px rgba(157, 185, 198, 0.39);
 }
