@@ -12,3 +12,10 @@
     stroke-width: 2px;
     fill-rule: evenodd;
 }
+
+.icon-close {
+    fill: none;
+    stroke: #222222;
+    stroke-width: 6px;
+    fill-rule: evenodd;
+}

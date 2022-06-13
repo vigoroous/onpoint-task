@@ -1,0 +1,88 @@
+.p3__article {
+    margin-top: 20px;
+}
+
+.p3__article-head {
+    font-family: 'Gilroy';
+    font-size: 25px;
+    font-weight: 900;
+    color: #68CAEA;
+}
+
+.p3__article-text {
+    font-family: 'DIN Pro';
+    font-size: 25px;
+    color: #2A2A2A;
+}
+
+.particles__item_15 {
+    top: 213px;
+    left: 77px;
+    width: 34px;
+    height: 34px;
+    z-index: 190;
+}
+
+.particles__item_16 {
+    top: 317px;
+    left: 187px;
+    width: 112px;
+    height: 112px;
+    z-index: 190;
+}
+
+.particles__item_17 {
+    top: 66px;
+    left: 198px;
+    width: 38px;
+    height: 38px;
+    z-index: 190;
+}
+
+.particles__item_18 {
+    top: 591px;
+    left: 242px;
+    width: 62px;
+    height: 62px;
+    z-index: 190;
+}
+
+.particles__item_19 {
+    top: 156px;
+    left: 184px;
+    width: 69px;
+    height: 69px;
+    z-index: 210;
+}
+
+.particles__item_20 {
+    top: 703px;
+    left: 184px;
+    width: 143px;
+    height: 143px;
+    z-index: 210;
+}
+
+.particles__item_21 {
+    top: 454px;
+    left: 11px;
+    width: 33px;
+    height: 33px;
+    z-index: 210;
+}
+
+.particles__item_22 {
+    top: 554px;
+    left: 25px;
+    width: 75px;
+    height: 75px;
+    z-index: 210;
+}
+
+.particles__item_23 {
+    top: 80px;
+    left: 50px;
+    width: 233px;
+    height: 689px;
+    z-index: 200;
+}

@@ -1,0 +1,71 @@
+<svg id="Группа_1" data-name="Группа 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="139.594" height="114.876" viewBox="0 0 139.594 114.876">
+  <defs>
+    <style>
+      .cls-1 {
+        filter: url(#filter);
+      }
+
+      .cls-2 {
+        fill: #f44687;
+      }
+
+      .cls-3 {
+        fill: #f4cf2f;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #f2f2f2;
+      }
+
+      .cls-4 {
+        opacity: 0.54;
+      }
+
+      .cls-6 {
+        fill: #1f88cb;
+      }
+
+      .cls-6, .cls-7 {
+        stroke: #f2f2f2;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 4px;
+      }
+
+      .cls-7 {
+        fill: none;
+        fill-rule: evenodd;
+      }
+    </style>
+    <filter id="filter" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#61caff"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" mode="color" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g class="cls-1">
+    <g id="_3" data-name="3">
+      <rect id="Rectangle_2_copy_3" data-name="Rectangle 2 copy 3" class="cls-2" x="9.406" y="12.219" width="113.844" height="86.563" rx="13" ry="13"/>
+      <rect class="cls-3" y="12.219" width="113.844" height="86.563" rx="13" ry="13"/>
+      <rect class="cls-4" x="40.437" y="36.688" width="56.469" height="4.719" rx="2.352" ry="2.352"/>
+      <rect id="Rectangle_4_copy" data-name="Rectangle 4 copy" class="cls-2" x="14.094" y="47.031" width="82.813" height="4.719" rx="2.352" ry="2.352"/>
+      <rect id="Rectangle_4_copy_2" data-name="Rectangle 4 copy 2" class="cls-4" x="13.656" y="57.938" width="83" height="4.688" rx="2.339" ry="2.339"/>
+      <rect id="Rectangle_4_copy_3" data-name="Rectangle 4 copy 3" class="cls-4" x="13.656" y="68.25" width="83" height="4.688" rx="2.339" ry="2.339"/>
+      <rect id="Rectangle_4_copy_4" data-name="Rectangle 4 copy 4" class="cls-4" x="14.094" y="79.969" width="26.344" height="4.719" rx="2.352" ry="2.352"/>
+      <path class="cls-5" d="M12.219,12.219H26.344a0,0,0,0,1,0,0v2.406a7,7,0,0,1-7,7H19.219a7,7,0,0,1-7-7V12.219A0,0,0,0,1,12.219,12.219Z"/>
+      <path id="Rectangle_6_copy" data-name="Rectangle 6 copy" class="cls-5" d="M36.687,12.219H50.812a0,0,0,0,1,0,0v2.406a7,7,0,0,1-7,7H43.687a7,7,0,0,1-7-7V12.219A0,0,0,0,1,36.687,12.219Z"/>
+      <path id="Rectangle_6_copy_2" data-name="Rectangle 6 copy 2" class="cls-5" d="M61.156,12.219H75.25a0,0,0,0,1,0,0v2.406a7,7,0,0,1-7,7H68.156a7,7,0,0,1-7-7V12.219A0,0,0,0,1,61.156,12.219Z"/>
+      <path id="Rectangle_6_copy_3" data-name="Rectangle 6 copy 3" class="cls-5" d="M85.625,12.219H99.718a0,0,0,0,1,0,0v2.406a7,7,0,0,1-7,7H92.625a7,7,0,0,1-7-7V12.219A0,0,0,0,1,85.625,12.219Z"/>
+      <rect id="Rectangle_5_copy_3" data-name="Rectangle 5 copy 3" class="cls-2" x="16.5" width="8.906" height="18.813" rx="4" ry="4"/>
+      <rect class="cls-3" x="14.094" width="8.875" height="18.813" rx="4" ry="4"/>
+      <rect id="Rectangle_5_copy_4" data-name="Rectangle 5 copy 4" class="cls-2" x="40.031" width="8.875" height="18.813" rx="4" ry="4"/>
+      <rect id="Rectangle_5_copy" data-name="Rectangle 5 copy" class="cls-3" x="37.625" width="8.875" height="18.813" rx="4" ry="4"/>
+      <rect id="Rectangle_5_copy_5" data-name="Rectangle 5 copy 5" class="cls-2" x="65.437" width="8.875" height="18.813" rx="4" ry="4"/>
+      <rect id="Rectangle_5_copy_2" data-name="Rectangle 5 copy 2" class="cls-3" x="63.031" width="8.875" height="18.813" rx="4" ry="4"/>
+      <rect id="Rectangle_5_copy_6" data-name="Rectangle 5 copy 6" class="cls-2" x="89.906" width="8.875" height="18.813" rx="4" ry="4"/>
+      <rect id="Rectangle_5_copy_6-2" data-name="Rectangle 5 copy 6" class="cls-3" x="87.5" width="8.875" height="18.813" rx="4" ry="4"/>
+    </g>
+  </g>
+  <circle id="Ellipse_4_copy" data-name="Ellipse 4 copy" class="cls-6" cx="113.656" cy="88.938" r="23.938"/>
+  <path class="cls-7" d="M102.9,87.952l9.886,8.423,11.406-13.783" transform="translate(-0.344 -0.063)"/>
+</svg>

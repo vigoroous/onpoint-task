@@ -1,7 +1,6 @@
-import { IconHome, IconDivider } from "icons/header-icons";
+import { IconHome, IconDivider } from "icons";
 import { SliderContext } from "providers/SliderProvider";
 import React, { FC, useContext } from "react";
-import { NavLink } from "react-router-dom";
 import "styles/header.css";
 
 const Header: FC = () => {
