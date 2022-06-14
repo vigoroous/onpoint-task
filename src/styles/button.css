@@ -1,4 +1,4 @@
-.next-button {
+.button {
     display: flex;
     align-items: center;
     background-color: #FF6AA2;
@@ -10,7 +10,7 @@
     cursor: pointer;
 }
 
-.next-button__icon {
+.button__icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -18,9 +18,13 @@
     border-radius: 100%;
     height: 50px;
     width: 50px;
+    color: #FFF;
+    font-family: 'Gilroy';
+    font-size: 30px;
+    font-weight: 400;
 }
 
-.next-button__name {
+.button__name {
     font-family: 'DIN Pro';
     font-weight: 400;
     font-size: 27px;

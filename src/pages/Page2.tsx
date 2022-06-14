@@ -1,7 +1,7 @@
 import { Scrollbar } from "components/Scrollbar";
 import { SliderContext } from "providers/SliderProvider";
 import React, { FC, useContext } from "react";
-import "styles/page2.css";
+import styles from "styles/page2.module.css";
 
 
 const Page2: FC = () => {
@@ -10,7 +10,7 @@ const Page2: FC = () => {
     return (
         <>
             <div className="page-wrapper" style={{ padding: `133px 70px 70px` }}>
-                <div className="page-title">Текст сообщения</div>
+                <div className={styles["page-title"]}>Текст сообщения</div>
                 <Scrollbar>
                     <>
                         <b>Lorem ipsum dolor sit amet</b>,
@@ -44,20 +44,20 @@ const Page2: FC = () => {
                 </Scrollbar>
             </div>
             <div className="particles" style={{ animationPlayState: `${page === 1 ? 'running' : 'paused'}` }}>
-                <div className="particles__item particles__item_10">
-                    <img src="images/group_2/item_10.png" draggable="false" alt="" />
+                <div className={`particles__item ${styles['particles__item_1']}`}>
+                    <img src="images/group_2/item_1.png" draggable="false" alt="" />
                 </div>
-                <div className="particles__item particles__item_11">
-                    <img src="images/group_2/item_11.png" draggable="false" alt="" />
+                <div className={`particles__item ${styles['particles__item_2']}`}>
+                    <img src="images/group_2/item_2.png" draggable="false" alt="" />
                 </div>
-                <div className="particles__item particles__item_12">
-                    <img src="images/group_2/item_12.png" draggable="false" alt="" />
+                <div className={`particles__item ${styles['particles__item_3']}`}>
+                    <img src="images/group_2/item_3.png" draggable="false" alt="" />
                 </div>
-                <div className="particles__item particles__item_13">
-                    <img src="images/group_2/item_13.png" draggable="false" alt="" />
+                <div className={`particles__item ${styles['particles__item_4']}`}>
+                    <img src="images/group_2/item_4.png" draggable="false" alt="" />
                 </div>
-                <div className="particles__item particles__item_14">
-                    <img src="images/group_2/item_14.png" draggable="false" alt="" />
+                <div className={`particles__item ${styles['particles__item_5']}`}>
+                    <img src="images/group_2/item_5.png" draggable="false" alt="" />
                 </div>
             </div>
         </>
