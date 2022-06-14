@@ -11,15 +11,18 @@ type SliderItemProps = {
 const SliderItem: FC<SliderItemProps> = ({ style, children }) => {
     const [page, setPage] = useContext(SliderContext);
     const offset = useRef(0);
+    //Touch
+    const xDown = useRef<number | null>(null);
+    const xDiff = useRef<number | null>(null);
 
+
+    //Mouse
     const handlePointerDown: React.PointerEventHandler<HTMLDivElement> = e => {
         offset.current = 0;
-        // e.preventDefault();
     }
 
     const handlePointerMove: React.PointerEventHandler<HTMLDivElement> = e => {
         offset.current += e.movementX;
-        // e.preventDefault();
     }
 
     const handlePointerUp: React.PointerEventHandler<HTMLDivElement> = e => {
@@ -30,12 +33,36 @@ const SliderItem: FC<SliderItemProps> = ({ style, children }) => {
             else
                 setPage(Math.max(0, page - 1));
         }
-        e.preventDefault();
     }
+
+
+    //Touch
+    const handleTouchStart: React.TouchEventHandler<HTMLDivElement> = e => {
+        xDown.current = e.touches[0].clientX;
+    }
+
+    const handleTouchMove: React.TouchEventHandler<HTMLDivElement> = e => {
+        if (!xDown.current) return
+        xDiff.current = xDown.current - e.touches[0].clientX
+    }
+
+    const handleTouchEnd: React.TouchEventHandler<HTMLDivElement> = e => {
+        const rect = e.currentTarget.getBoundingClientRect();
+        if (!xDiff.current) return
+        if (Math.abs(xDiff.current) > rect.width * 0.3) {
+            if (xDiff.current > 0) {
+                setPage(Math.min(2, page + 1));
+            } else {
+                setPage(Math.max(0, page - 1));
+            }
+        }
+        xDown.current = null;
+        xDiff.current = null;
+    }
+
 
     useEffect(() => {
         console.log(page)
-
     }, [page]);
 
     return (
@@ -43,8 +70,10 @@ const SliderItem: FC<SliderItemProps> = ({ style, children }) => {
             onPointerDown={handlePointerDown}
             onPointerUp={handlePointerUp}
             onPointerMove={handlePointerMove}
+            onTouchStart={handleTouchStart}
+            onTouchMove={handleTouchMove}
+            onTouchEnd={handleTouchEnd}
             style={style}
-        // style={{ transform: `translate3d(${x}vw, 0 ,0)` }}
         >
             {children}
         </div>
@@ -63,9 +92,7 @@ const Slider: FC<SliderProps> = ({ children }) => {
         <div className="slider" style={{
             backgroundImage: `url('images/bg_full.png')`,
             backgroundPositionX: `${offsetX}vw`,
-            // transform: `translate3d(${offsetX}vw, 0 ,0)`,
         }}>
-            {/* {children} */}
             {Children.map(children, (child, index) => {
                 if (child)
                     return cloneElement(child, {
