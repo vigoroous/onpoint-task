@@ -24,7 +24,7 @@ const IconClose = () =>
 
 const IconNext = () =>
     <svg xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" width="14.5" height="21" viewBox="0 0 29 42">
-        <path fill-rule="evenodd" stroke="rgb(0, 0, 0)" stroke-width="4px" stroke-linecap="round" stroke-linejoin="miter" fill="none"
+        <path fillRule="evenodd" stroke="rgb(0, 0, 0)" strokeWidth="4px" strokeLinecap="round" strokeLinejoin="miter" fill="none"
             d="M4.981,4.849 L21.173,19.985 L4.981,35.122 " />
     </svg>
 
