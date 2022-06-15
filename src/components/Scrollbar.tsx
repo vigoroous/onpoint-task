@@ -26,8 +26,8 @@ const Scrollbar: FC<ScrollbarProps> = ({ children }) => {
     const maxHeight = useRef(0);
     const state = useRef({ drag: false, top: 0 })
     //Touch
-    const yDown = useRef<number | null>(null);
-    const yDiff = useRef<number | null>(null);
+    const yDown = useRef<number>(0);
+    const yDiff = useRef<number>(0);
 
 
     //Mouse
@@ -57,8 +57,7 @@ const Scrollbar: FC<ScrollbarProps> = ({ children }) => {
     //Touch
     const handleTouchStart = useCallback((e: TouchEvent) => {
         state.current.drag = true;
-        yDown.current = e.touches[0].clientY;
-        e.preventDefault();
+        yDown.current = e.targetTouches[0].clientY;
     }, []);
 
     const handleTouchMove = useCallback((e: TouchEvent) => {
@@ -66,20 +65,21 @@ const Scrollbar: FC<ScrollbarProps> = ({ children }) => {
         if (!thumbRef.current) return;
         if (!contentRef.current) return;
         if (!yDown.current) return;
-        yDiff.current = yDown.current - e.touches[0].clientY
+        yDiff.current = e.targetTouches[0].clientY - yDown.current;
+        yDown.current = e.targetTouches[0].clientY;
         const contentHeight = contentRef.current.clientHeight;
-        state.current.top = clamp(-yDiff.current, 0, maxHeight.current);
+        state.current.top = clamp(state.current.top + yDiff.current, 0, maxHeight.current);
+        console.log(yDown.current, yDiff.current, state.current.top)
         thumbRef.current.style.top = `${state.current.top}px`;
         contentRef.current.scrollTo({ top: state.current.top * contentHeight / maxHeight.current, behavior: "auto" })
-        e.preventDefault();
     }, []);
 
     const handleTouchEnd = useCallback((e: TouchEvent) => {
         state.current.drag = false;
         maxHeight.current = (controlRef.current?.clientHeight ?? 0) - (thumbRef.current?.clientHeight ?? 0);
-        yDown.current = null;
-        yDiff.current = null;
-        // e.preventDefault()
+        console.log(yDown.current, yDiff.current)
+        yDown.current = 0
+        yDiff.current = 0
     }, []);
 
 
@@ -89,14 +89,14 @@ const Scrollbar: FC<ScrollbarProps> = ({ children }) => {
         window.addEventListener('pointerup', handlePointerUp);
         thumbRef.current?.addEventListener('touchstart', handleTouchStart);
         thumbRef.current?.addEventListener('touchmove', handleTouchMove);
-        window.addEventListener('touchend', handleTouchEnd);
+        thumbRef.current?.addEventListener('touchend', handleTouchEnd);
         return () => {
             thumbRef.current?.removeEventListener('pointerdown', handlePointerDown);
             window.removeEventListener('pointermove', handlePointerMove);
             window.removeEventListener('pointerup', handlePointerUp);
             thumbRef.current?.removeEventListener('touchstart', handleTouchStart);
             thumbRef.current?.removeEventListener('touchmove', handleTouchMove);
-            window.removeEventListener('touchend', handleTouchEnd);
+            thumbRef.current?.removeEventListener('touchend', handleTouchEnd);
         };
     }, [handlePointerDown]);
 

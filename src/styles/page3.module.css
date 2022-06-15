@@ -22,6 +22,7 @@
     color: #1F1F1F;
     margin-left: 290px;
     letter-spacing: 2px;
+    max-width: 724px;
 }
 
 .head {
@@ -31,6 +32,7 @@
     color: #1F1F1F;
     margin-left: 290px;
     letter-spacing: 14px;
+    max-width: 724px;
 }
 
 .head_bold {
@@ -41,6 +43,7 @@
     display: flex;
     margin-left: 200px;
     margin-top: 70px;
+    max-width: 724px;
 }
 
 .imagebox-wrap {
